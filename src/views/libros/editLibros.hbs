@@ -1,0 +1,51 @@
+<div class="row py-5">
+    <div class="col-md-5 mx-auto">
+        <div class="card">
+            <div class="card-header text-center fw-bolder"><h3>Libro: {{libro.titulo}}</h3></div>
+            <div class="card-body">
+                <form action="/libros/update/{{libro._id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <div class="form-group">
+                        <label>Codigo</label>
+                        <input type="text" name="codLibro" class="form-control" value="{{libro.codLibro}}" >
+                    </div>
+                    <div class="form-group">
+                        <label>Titulo</label>
+                        <input type="text" name="titulo" class="form-control" value="{{libro.titulo}}" >
+                    </div>
+                    <div class="form-group d-flex">
+                        <div class="w-100">
+                            <label>Editorial Actual:</label>
+                            <input type="text"  readonly class="form-control" value="{{libro.editorial.editorial}}">
+                        </div>
+                        <div class="w-100">
+                            <label>Nueva Editorial</label>
+                            <select name="editorial" class="form-control">
+                                {{#each editorial}}
+                                    <option value="{{codEditorial}}">{{editorial}}</option>
+                                {{/each }}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex">
+                        <div class="w-100">
+                            <label>Autor Actual:</label>
+                            <input type="text"  readonly class="form-control" value="{{libro.autor.nombres}}" >
+                        </div>
+                        <div class="w-100">
+                            <label>Nueva Editorial</label>
+                            <select name="autor" class="form-control">
+                                {{#each autores}}
+                                    <option value="{{codAutor}}">{{nombres}}</option>
+                                {{/each }}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Actualizar Editorial</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>

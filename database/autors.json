@@ -1,0 +1,7 @@
+[
+{ "_id" : { "$oid" : "62f9878b4f12c45946830fb0" }, "codAutor" : "00001", "apellidos" : "Vallejo", "nombres" : "Cesar", "pais" : "Perú", "createdAt" : { "$date" : "2022-08-14T23:38:51.794+0000" }, "updatedAt" : { "$date" : "2022-08-14T23:38:51.794+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9879a4f12c45946830fb3" }, "codAutor" : "00002", "apellidos" : "Brown", "nombres" : "Dan", "pais" : "USA", "createdAt" : { "$date" : "2022-08-14T23:39:06.047+0000" }, "updatedAt" : { "$date" : "2022-08-14T23:39:06.047+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f987a64f12c45946830fb6" }, "codAutor" : "00003", "apellidos" : "Cohello", "nombres" : "Paulo", "pais" : "Brasil", "createdAt" : { "$date" : "2022-08-14T23:39:18.138+0000" }, "updatedAt" : { "$date" : "2022-08-14T23:39:18.138+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f987b24f12c45946830fba" }, "codAutor" : "00004", "apellidos" : "Abraham", "nombres" : "Valdelomar", "pais" : "Perú", "createdAt" : { "$date" : "2022-08-14T23:39:30.789+0000" }, "updatedAt" : { "$date" : "2022-08-14T23:39:30.789+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f987be4f12c45946830fbd" }, "codAutor" : "00005", "apellidos" : "Neruda", "nombres" : "Pablo", "pais" : "Chile", "createdAt" : { "$date" : "2022-08-14T23:39:42.816+0000" }, "updatedAt" : { "$date" : "2022-08-14T23:39:42.816+0000" }, "__v" : 0 }
+]

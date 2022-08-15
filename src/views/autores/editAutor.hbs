@@ -1,0 +1,31 @@
+<div class="row py-5">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header text-center fw-bolder"><h3>Autor: {{autor.nombres}}</h3></div>
+            <div class="card-body">
+                <form action="/autores/update/{{autor._id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <div class="form-group">
+                        <label>Codigo</label>
+                        <input type="text" name="codAutor" class="form-control" value="{{autor.codAutor}}" placeholder="Codigo">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" name="apellidos" class="form-control" value="{{autor.apellidos}}" placeholder="Apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input type="text" name="nombres" class="form-control" value="{{autor.nombres}}" placeholder="Nombres">
+                    </div>
+                    <div class="form-group">
+                        <label>Pais</label>
+                        <input type="text" name="pais" class="form-control" value="{{autor.pais}}" placeholder="Pais">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Actualizar Autor</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>

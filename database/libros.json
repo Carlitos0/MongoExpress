@@ -1,0 +1,9 @@
+[
+{ "_id" : { "$oid" : "62f99ac839cd650c41636978" }, "codLibro" : "001", "titulo" : "Paco Yunque", "editorial" : { "$oid" : "62f9700a3992ac9508b2bcba" }, "autor" : { "$oid" : "62f9878b4f12c45946830fb0" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bee7d7a3e90f5498ad1b" }, "codLibro" : "002", "titulo" : "El Código da Vinci", "editorial" : { "$oid" : "62f970493992ac9508b2bcc1" }, "autor" : { "$oid" : "62f9879a4f12c45946830fb3" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bf09d7a3e90f5498ad27" }, "codLibro" : "003", "titulo" : "Caballero Carmelo", "editorial" : { "$oid" : "62f9700a3992ac9508b2bcba" }, "autor" : { "$oid" : "62f987b24f12c45946830fba" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bf27d7a3e90f5498ad3b" }, "codLibro" : "004", "titulo" : "El Alquimista", "editorial" : { "$oid" : "62f9730295eff4c9487ce148" }, "autor" : { "$oid" : "62f987a64f12c45946830fb6" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bf3ed7a3e90f5498ad47" }, "codLibro" : "005", "titulo" : "Angeles y Demonios", "editorial" : { "$oid" : "62f970493992ac9508b2bcc1" }, "autor" : { "$oid" : "62f9879a4f12c45946830fb3" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bf4ed7a3e90f5498ad53" }, "codLibro" : "006", "titulo" : "Infierno", "editorial" : { "$oid" : "62f9730295eff4c9487ce148" }, "autor" : { "$oid" : "62f9879a4f12c45946830fb3" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9bf61d7a3e90f5498ad5f" }, "codLibro" : "007", "titulo" : "Veinte poemas de amor", "editorial" : { "$oid" : "62f9700a3992ac9508b2bcba" }, "autor" : { "$oid" : "62f9878b4f12c45946830fb0" }, "__v" : 0 }
+]

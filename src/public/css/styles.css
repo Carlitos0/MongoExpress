@@ -1,0 +1,27 @@
+.btn-update{
+    font-size: 2rem;
+}
+
+.color-input{
+    background-color: #fff !important;
+    transition: background-color .5s ease;
+}
+.color-input:hover{
+    background-color: rgb(216, 250, 255) !important;
+}
+.btn-delete {
+    border: 0 ;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(159, 11, 11);
+}
+
+.btn-controls{
+    font-size: 20px;
+    transition: color .7s ease, transform .5s ease;
+}
+
+.btn-controls:hover{
+    color: #000;
+    transform: rotate(360deg);
+}

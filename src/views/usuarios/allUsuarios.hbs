@@ -1,0 +1,50 @@
+
+<div class="d-flex justify-content-between align-items-start my-5">
+    <div class="card">
+        <div class="card-header text-center">Añadir Usuario</div>
+        <div class="card-body">
+            <form action="/usuarios/add" method="POST">
+                <div class="form-group">
+                <input type="text" class="form-control" name="codUser" placeholder="Codigo">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="login" placeholder="login">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="password" placeholder="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-warning btn-block">Add User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container w-50">
+        <table class="table table-hover text-center"> 
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Codigo</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Controls</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each usuarios}}
+                    <tr>
+                        <td>{{codUser}}</td>
+                        <td>{{login}}</td>
+                        <td>{{password}}</td>
+                        <td class="d-flex justify-content-around align-items-center">
+                            <a href="/usuarios/update/{{_id}}"><i class="fa-solid fa-pencil btn-controls"></i></a>
+                            <form action="/usuarios/delete/{{_id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class=" btn-delete btn-controls "><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

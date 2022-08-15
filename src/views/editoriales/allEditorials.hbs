@@ -1,0 +1,33 @@
+<div class="row my-5">
+    {{#each editoriales}}
+        <div class="col-md-4 my-2">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>{{editorial}}</h3>
+                    <a href="/editoriales/update/{{_id}}" class="btn-update"><i class="fa-solid fa-pencil"></i></a>
+                </div>
+                <div class="card-body py-2">                    
+                    <input type="hidden" name="_method" value="PUT">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Codigo</span>
+                        </div>
+                        <input type="text" class="form-control color-input" value="{{codEditorial}}" readonly name="codAutor">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Apellidos</span>
+                        </div>
+                        <input type="text" class="form-control color-input" value="{{editorial}}" readonly name="apellidos">
+                    </div>
+                    <div class="form-group d-flex flex-column flex-sm-row mt-2">
+                        <form action="/editoriales/delete/{{_id}}?_method=DELETE" method="POST" class="container p-0">
+                            <button type="submit" class="btn btn-danger btn-block">Eliminar</button>
+                            <input type="hidden" name="_method" value="DELETE">
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

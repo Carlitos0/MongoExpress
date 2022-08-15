@@ -1,0 +1,5 @@
+[
+{ "_id" : { "$oid" : "62f9700a3992ac9508b2bcba" }, "codEditorial" : "001", "editorial" : "Alpha", "createdAt" : { "$date" : "2022-08-14T21:58:34.374+0000" }, "updatedAt" : { "$date" : "2022-08-14T22:09:03.696+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f970493992ac9508b2bcc1" }, "codEditorial" : "002", "editorial" : "Omega", "createdAt" : { "$date" : "2022-08-14T21:59:37.159+0000" }, "updatedAt" : { "$date" : "2022-08-14T21:59:37.159+0000" }, "__v" : 0 },
+{ "_id" : { "$oid" : "62f9730295eff4c9487ce148" }, "codEditorial" : "003", "editorial" : "Macro", "createdAt" : { "$date" : "2022-08-14T22:11:14.963+0000" }, "updatedAt" : { "$date" : "2022-08-14T22:11:14.963+0000" }, "__v" : 0 }
+]
