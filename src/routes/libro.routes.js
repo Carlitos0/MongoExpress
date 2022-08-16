@@ -3,7 +3,7 @@ const {
   allLibros,
   autorId,
   addLibro,
-  renderAutorForm,
+  renderLibroForm,
   renderEditForm,
   deleteLibro,
   updateLibro
@@ -13,7 +13,7 @@ router.get("/libros", allLibros);
 
 router.get("/autor/:id", autorId);
 
-router.get("/libros/add", renderAutorForm);
+router.get("/libros/add", renderLibroForm);
 router.post("/libros/add", addLibro);
 
 router.get("/libros/update/:id", renderEditForm);

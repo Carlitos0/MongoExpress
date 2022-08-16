@@ -1,22 +1,20 @@
 const editorialCtr = {};
 const Editorial = require("../models/Editorial");
+/* const {success_msg} = process.env; */
 
 editorialCtr.renderAllEditorials  = async (req,res) =>{
     const editoriales = await Editorial.find().lean();
-    res.render("editoriales/allEditorials",{editoriales});
+    res.render("editoriales/allEditorials",{
+        editoriales,
+        success_msg: req.flash("success_msg"),
+        error_msg: req.flash("error_msg"),
+    });
 }
 
 editorialCtr.renderAddEditorial = (req,res) => {
-    res.render("editoriales/addEditorial");
-}
-
-editorialCtr.addEditorial = async (req,res) => {
-    const {codEditorial,editorial} = req.body;
-    const newEditorial = new Editorial({codEditorial,editorial});
-    await newEditorial.save()
-        .then(sv => console.log(`Se añadió correctamente la editorial ${editorial}`))
-        .catch(err => console.log(`Error: ${err}`))
-    res.redirect("/editoriales");
+    res.render("editoriales/addEditorial",{
+        error_msg: req.flash("error_msg")
+    });
 }
 
 editorialCtr.renderEditForm = async (req,res) => {
@@ -24,16 +22,63 @@ editorialCtr.renderEditForm = async (req,res) => {
     res.render("editoriales/editEditorial",{editorial});
 }
 
+
+editorialCtr.addEditorial = async (req,res) => {
+    const {codEditorial,editorial} = req.body;
+    const dataBody = Object.values(req.body);
+    let ct = 0;
+    for(let i = 0; i < dataBody.length ; i++){
+        if(dataBody[i].trim() == ""){
+            ct = 1;
+        }
+    }
+    if(ct == 1){
+        req.flash("error_msg",`Los campos no deben estar vacíos`)
+        res.redirect("/editoriales/add")
+    }else{
+        const newEditorial = new Editorial({codEditorial,editorial});
+        await newEditorial.save()
+            .then(sv => {
+                req.flash("success_msg",`Se añadió correctamente la editorial ${sv.editorial}`)
+                res.redirect("/editoriales");
+            })
+            .catch(err =>{
+                req.flash("error_msg",`Hubo un error al agregar la editorial`);
+                res.render("editoriales/allEditorials");
+            })
+    }
+}
+
 editorialCtr.updateEditorial = async (req,res) => {
-    const {codEditorial,editorial} = req.body
-    await Editorial.findByIdAndUpdate(req.params.id,{codEditorial,editorial});
-    res.redirect("/editoriales");
+    const {codEditorial,editorial} = req.body;
+    const dataBody = Object.values(req.body);
+    let ct = 0;
+    for(let i = 0; i < dataBody.length ; i++){
+        if(dataBody[i].trim() == ""){
+            ct = 1;
+        }
+    }
+    if(ct == 1){
+        req.flash("error_msg","Error: Los campos a actualizar no deben estar vacíos");
+        res.redirect("/editoriales");
+    }else{
+        await Editorial.findByIdAndUpdate(req.params.id,{codEditorial,editorial});
+        req.flash("success_msg","Se actualizó correctamente");
+        res.redirect("/editoriales");
+    }
 }
 
 editorialCtr.deleteEditorial = async (req,res) => {
     const id = req.params.id;
-    await Editorial.findByIdAndDelete(id);
-    res.redirect("/editoriales");
+    await Editorial.findByIdAndDelete(id)
+        .then(sv => {
+            req.flash("success_msg",`Se Elimino el registro ${sv.codEditorial} correctamente`);
+            res.redirect("/editoriales");
+        })
+        .catch(err => {
+            req.flash("error_msg",`Hubo un error al eliminar la editorial`);
+            res.redirect("editoriales");
+        })
 }
 
 module.exports = editorialCtr;

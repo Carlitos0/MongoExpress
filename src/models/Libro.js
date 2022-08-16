@@ -1,4 +1,4 @@
-const { Schema, model, SchemaTypes } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const LibroSchema = new Schema({
   codLibro: { type: String, require: true },

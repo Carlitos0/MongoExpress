@@ -6,7 +6,6 @@ const methodovr = require("method-override");
 const cookieParser = require("cookie-parser");
 const flash = require("connect-flash");
 const session = require("express-session");
-
 // Initialization
 const app = express();
 
@@ -17,7 +16,8 @@ app.engine(".hbs",exphbs.engine({
     defaultLayout: "main",
     layoutsDir: path.join(app.get("views"),"layouts"),
     partialsDir: path.join(app.get("views"),"partials"),
-    extname: ".hbs"
+    extname: ".hbs",
+
 }));
 app.set("view engine", ".hbs");
 

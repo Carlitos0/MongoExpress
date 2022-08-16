@@ -16,9 +16,10 @@ indexCtr.signup = async (req,res) => {
     const user = await User.findOne({login:body.login});
     const pwd = user?user.password:"";
     const pwdVerification = body.password == pwd?true:false;
-    console.log(user)
-    console.log(pwdVerification);
+    /* console.log(user)
+    console.log(pwdVerification); */
     if(user && pwdVerification){
+        req.flash("success_msg","Validacion Correcta: Ingreso satisfactorio")
         res.redirect("/autores");
     }
     else{
