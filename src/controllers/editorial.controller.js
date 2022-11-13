@@ -22,15 +22,27 @@ editorialCtr.renderEditForm = async (req,res) => {
     res.render("editoriales/editEditorial",{editorial});
 }
 
+async function existeCodigoEdit(codEditorial){
+    const existe = await Editorial.findOne({codEditorial:codEditorial});
+    if(existe){
+        return true
+    }else{ 
+        return false 
+    }
+}
 
 editorialCtr.addEditorial = async (req,res) => {
     const {codEditorial,editorial} = req.body;
     const dataBody = Object.values(req.body);
+    const existe = await existeCodigoEdit(codEditorial);
     let ct = 0;
     for(let i = 0; i < dataBody.length ; i++){
         if(dataBody[i].trim() == ""){
             ct = 1;
         }
+    }
+    if(existe){
+        req.flash("error_msg",`El codigo ingresado ya existe  `)
     }
     if(ct == 1){
         req.flash("error_msg",`Los campos no deben estar vacíos`)

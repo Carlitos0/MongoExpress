@@ -30,3 +30,44 @@ body{
     color: #000;
     transform: rotate(360deg);
 }
+.bg-alt{
+    background: #D8FFFF !important;
+}
+.t-style{
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    /* background: #232323; */
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+.t-style2{
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    /* background: #232323; */
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ffcd18, 0 0 30px #ffcd18, 0 0 40px #ffcd18, 0 0 55px #ffcd18, 0 0 75px #ffcd18;    
+}
+.t-style3{
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    /* background: #232323; */
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #204175, 0 0 30px #204175, 0 0 40px #204175, 0 0 55px #204175, 0 0 75px #204175;
+}
+.t-style4{
+    color: #000;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    /* background: #232323; */
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #3a5243, 0 0 30px #3a5243, 0 0 40px #3a5243, 0 0 55px #3a5243, 0 0 75px #3a5243;
+}
+.enlaceFoot{
+    text-decoration: none;
+    font-size: 3rem;
+    color: brown;
+    transition: color .7s ease;
+}
+.enlaceFoot:hover{
+    text-decoration: none;
+    color: rgb(49, 49, 147);
+}

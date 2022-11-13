@@ -28,23 +28,6 @@ indexCtr.signup = async (req,res) => {
             errors
         })
     }
-    /* console.log(user[0].login.includes(login))
-    console.log(user.includes(login)); */
-    /* for(let i = 0; i < user.length ; i++){
-        if(user[i].login.includes(login) && user[i].password.includes(password)){
-            res.redirect("/autores")
-            break
-        }else{
-            if(login != user[i].login || password != user[i].password){
-                errors.push({text: "Credenciales incorrectas"});
-            }
-        }
-    } */
-    /* if(errors.length > 0){
-        res.render("index",{
-            errors
-        })
-    } */
 }
 
 indexCtr.ValidateSingin = async (req,res) =>{

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const {MONGODB_HOST,BIBLIOTECA_MONGODB_DATABASE} = process.env;
-const MONGODB_URI = `mongodb://${MONGODB_HOST}/${BIBLIOTECA_MONGODB_DATABASE}`;
+const {USER,PASSWORD,CLUSTER,DBNAME} = process.env;
+const MONGODB_URI = `mongodb+srv://${USER}:${PASSWORD}@${CLUSTER}/${DBNAME}?retryWrites=true&w=majority`;
 
 (async ()=>{
     try {

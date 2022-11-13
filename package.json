@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/RchlIndex.js",
     "dev": "nodemon src/RchlIndex.js"
   },
   "keywords": [],
